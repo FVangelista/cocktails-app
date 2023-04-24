@@ -1,4 +1,4 @@
-## Cocktails webapp
+## Cocktails Webapp
 
 It is about an event that is supposed to happen, the user can preorder the entrance for the event and also have a look at the drinks menu that will be available with some useful information.
 
