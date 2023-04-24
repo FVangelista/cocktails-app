@@ -25,7 +25,7 @@
 
   .info {
     @include flex-container(row, center, center, 20px);
-    @include text-style(normal, 1rem);
+    @include text-style(normal, 1rem, none, default);
     padding: 20px;
     @media screen and (max-width: 920px) {
       flex-direction: column-reverse;

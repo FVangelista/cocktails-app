@@ -6,8 +6,8 @@ function FooterSection({ refs }) {
   return (
     <div ref={refs.footerRef} className={styles.Footer}>
       <div className={styles.info}>
-        <span>&copy;cocktails by bortoletti.srl</span>
-        <span>e-mail: random@random.com</span>
+        <span>&copy; Cocktails</span>
+        <span>E-mail: contact@contact.com</span>
       </div>
       <div className={styles.logo}>
         <img src={logo} alt="logo" />
