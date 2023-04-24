@@ -1,0 +1,35 @@
+@import "../../scss/variablesDefault";
+@import "../../scss/mixins";
+
+.Footer {
+  @include flex-container;
+  width: 80%;
+  height: 75px;
+  margin: 0 auto;
+  padding: 20px;
+
+  @media screen and (max-width: 920px) {
+    flex-direction: column-reverse;
+    gap: 20px;
+    height: 100%;
+  }
+
+  .logo {
+    color: $primary-color;
+
+    text-align: center;
+    @media screen and (max-width: 920px) {
+      width: 100%;
+    }
+  }
+
+  .info {
+    @include flex-container(row, center, center, 20px);
+    @include text-style(normal, 1rem);
+    padding: 20px;
+    @media screen and (max-width: 920px) {
+      flex-direction: column-reverse;
+      width: 100%;
+    }
+  }
+}

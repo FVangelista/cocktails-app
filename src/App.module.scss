@@ -1,0 +1,9 @@
+@import './scss/variablesDefault';
+@import './scss/mixins';
+
+.App {
+  position: relative;
+  font-family: $font-family-primary;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}

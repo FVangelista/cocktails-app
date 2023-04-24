@@ -1,0 +1,150 @@
+@import "../../scss/variablesDefault";
+@import "../../scss/mixins";
+
+.Mission {
+  @include flex-container(column);
+
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1600px;
+  padding: 40px;
+  margin: 0 auto;
+  gap: 20px;
+
+  @media screen and (max-width: 500px) {
+    padding: 20px;
+  }
+
+  .textWrapper {
+    @include flex-container(column, center, center, 20px);
+    width: 100%;
+    height: 30%;
+    padding: 20px;
+
+    @media screen and (max-width: 920px) {
+      position: static;
+      height: 50%;
+      width: 100%;
+      padding: 40px;
+      flex-direction: column;
+      gap: 10px;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 10px;
+    }
+
+    .text {
+      width: 60%;
+      @include text-style(
+        bold,
+        2rem,
+        none,
+        uppercase,
+        0.1rem,
+        $secondary-color,
+        start
+      );
+      @media screen and (max-width: 920px) {
+        height: 25%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    .line {
+      height: 0.75px;
+      width: 75%;
+      background-color: $primary-alpha-color;
+      @media screen and (max-width: 920px) {
+        display: none;
+      }
+    }
+
+    .textSub {
+      width: 60%;
+      @include text-style(
+        normal,
+        1.5rem,
+        none,
+        capitalize,
+        0.1rem,
+        $primary-color,
+        end
+      );
+      @media screen and (max-width: 920px) {
+        height: 50%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .reviews {
+    @include flex-container(row, center, center, 25px);
+
+    width: 100%;
+    height: 70%;
+    padding: 40px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 500px) {
+      padding: 10px;
+    }
+
+    .card {
+      @include flex-container(column, space-evenly);
+
+      padding: 20px;
+
+      background-color: $secondary-color;
+      border-radius: $primary-radius;
+      box-shadow: $primary-shadow;
+      height: 425px;
+      width: 100%;
+      max-width: 275px;
+
+      .imgWrapper {
+        border: 1px solid $bg-color;
+        border-radius: 50%;
+        padding: 10px;
+        height: 185px;
+        width: 185px;
+        .userImg {
+          border-radius: 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 0px 0px;
+        }
+      }
+
+      .textWrapper {
+        @include flex-container(column, space-between, center);
+        @include text-style;
+
+        padding: 10px;
+        width: 100%;
+        height: 50%;
+        border: 0;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("https://images.unsplash.com/photo-1503788311183-fa3bf9c4bc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -15;
+    -webkit-clip-path: inset(30% 10% 10% 30%);
+    clip-path: inset(30% 10% 10% 30%);
+  }
+}

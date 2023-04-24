@@ -1,0 +1,63 @@
+@import "../../scss/variablesDefault";
+@import "../../scss/mixins";
+
+.form {
+  @include flex-container(column, center, center, 20px);
+
+  background-color: $primary-alpha-color;
+  border-radius: $primary-radius;
+  box-shadow: $secondary-shadow;
+  height: 500px;
+  width: 475px;
+
+  @media screen and (max-width: 920px) {
+    width: 100%;
+  }
+
+  .delInput {
+    @include button(
+      $bg-color,
+      $secondary-color,
+      $bg-color,
+      $secondary-color,
+      1rem
+    );
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    @media screen and (max-width: 920px) {
+      bottom: 9rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media screen and (max-width: 500px) {
+      width: 75%;
+    }
+  }
+
+  .textInput {
+    height: 35px;
+    width: 40%;
+    background-color: $bg-color;
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: $primary-radius;
+    border: 0;
+
+    @media screen and (max-width: 500px) {
+      width: 75%;
+    }
+
+    &::placeholder {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: none;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
