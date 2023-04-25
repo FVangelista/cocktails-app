@@ -3,6 +3,7 @@
 
 .Footer {
   @include flex-container;
+  align-items: center;
   width: 80%;
   height: 75px;
   margin: 0 auto;
@@ -31,5 +32,11 @@
       flex-direction: column-reverse;
       width: 100%;
     }
+  }
+
+  .icon {
+    margin: 10px;
+    font-size: 1.45rem;
+    color: $secondary-color;
   }
 }
